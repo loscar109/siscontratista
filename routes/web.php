@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('configuracion/pais','PaisController');
+//Route::resource('configuracion/pais','PaisController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
